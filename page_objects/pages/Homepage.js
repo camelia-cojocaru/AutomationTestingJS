@@ -18,5 +18,9 @@ class Homepage extends Base{
         this.clientsButton.click();
     };
 
+    redirectToStylistManagement(){
+        this.stylistButton.click();
+    };
+
 }
 export default new Homepage();

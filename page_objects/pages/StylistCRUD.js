@@ -50,6 +50,15 @@ class StylistEdit extends Base{
     get error(){
         return $('.edit-stylists__message');
     };
+
+    get defaultStylist(){
+        return $('=Test');
+    };
+
+    selectDefaultStylist(){
+        this.waitForExist();
+        this.defaultStylist.click();
+    };
 };
 
 export const stylistAdd = new StylistAdd();

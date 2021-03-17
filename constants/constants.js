@@ -6,8 +6,8 @@ export const salonSignInConst = {
 
 export const stylistCRUDConst = {
    invalidStylistName: 'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS',
-   validStylistName: 'Test2',
-   duplicateStylistName: 'Test'
+   validStylistName: 'Test3',
+   defaultStylistName: 'Test'
 };
 
 export const devices = {

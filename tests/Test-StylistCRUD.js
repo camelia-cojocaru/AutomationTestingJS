@@ -18,7 +18,7 @@ describe('Stylist CRUD functionalities', () => {
     
     it('Error appears when user tries to enter stylist that already exists', () => {
         stylistAdd.inputIsVisible();
-        stylistAdd.fillName(stylistCRUDConst.duplicateStylistName );
+        stylistAdd.fillName(stylistCRUDConst.defaultStylistName );
         stylistAdd.clickSaveButton();
 
         const message=stylistEdit.error;
@@ -36,7 +36,8 @@ describe('Stylist CRUD functionalities', () => {
 
      it('Should edit stylist ', () => {
         Homepage.redirectToStylistManagement();
-
+        stylistEdit.selectDefaultStylist();
+        
     });
 
     it('Should remove stylist', () => {

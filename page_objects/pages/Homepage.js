@@ -7,11 +7,11 @@ class Homepage extends Base{
     };
 
     get clientsButton(){
-        return $('img[alt="Clients"]');
+        return $('=Clients');
     };
 
     get stylistButton(){
-        return $('img[alt="Stylists Management Icon"]');
+        return $('=Stylists Management');
     };
 
     redirectToClients(){

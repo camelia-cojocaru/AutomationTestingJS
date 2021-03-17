@@ -1,7 +1,7 @@
 import  {salonSignInConst, messages, appUrl} from  '../constants/constants';
 import SalonSignIn from '../page_objects/pages/SalonSignIn';
 
-describe('Activate your device futionality', () => {
+describe('Activate your device functionality', () => {
     it('Should not login with invalid credentials', () => {
         SalonSignIn.openApp();
         SalonSignIn.inputIsVisible();
@@ -21,7 +21,7 @@ describe('Activate your device futionality', () => {
         expect(message).toHaveText(messages.maxCharLenght);
         
     });
-    it('Should login with valid credentuals', () => {
+    it('Should login with valid credentials', () => {
         SalonSignIn.openApp();
         SalonSignIn.inputIsVisible();
         SalonSignIn.fillSalonId(salonSignInConst.validSalonId);
@@ -29,8 +29,5 @@ describe('Activate your device futionality', () => {
 
         expect(browser).toHaveUrl(appUrl.stylistUrl);
 
-    });
-
-   
-    
+    }); 
 });

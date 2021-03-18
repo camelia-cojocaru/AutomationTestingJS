@@ -1,6 +1,4 @@
-import Base from './Base'
-
-
+import Base from './Base';
 class StylistAdd extends Base{
 
     get nameInput(){
@@ -12,7 +10,7 @@ class StylistAdd extends Base{
     };
 
     get saveStylistButton(){
-        return $('button');
+        return $('button=Save');
     };
 
     get addStylistButton(){
@@ -52,12 +50,46 @@ class StylistEdit extends Base{
     };
 
     get defaultStylist(){
-        return $('=Test');
+        return $('.name=Test1');
+    }
+
+    get editButton(){
+        return $('button=Save');
+    };
+
+    get removeButton(){
+        return $('button*=Remove');
+    };
+
+    get editedStylist(){
+        return $('.name=EditedTest');
+    };
+
+    get confirmRemoveButton(){
+        return $('button=Remove stylsit')
+    }
+    clickEditButton(){
+        this.editButton.click();
+    };
+
+    clickRemoveButton(){
+        this.removeButton.waitForExist();
+        this.removeButton.click();
+    };
+
+    clickConfirmRemoveButton(){
+        this.confirmRemoveButton.waitForExist();
+        this.confirmRemoveButton.click();
     };
 
     selectDefaultStylist(){
-        this.waitForExist();
+        this.defaultStylist.waitForExist();
         this.defaultStylist.click();
+    };
+
+    selectEditedStylist(){
+        this.editedStylist.waitForExist();
+        this.editedStylist.click();
     };
 };
 

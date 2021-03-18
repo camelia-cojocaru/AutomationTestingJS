@@ -6,8 +6,9 @@ export const salonSignInConst = {
 
 export const stylistCRUDConst = {
    invalidStylistName: 'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS',
-   validStylistName: 'Test3',
-   defaultStylistName: 'Test'
+   validStylistName: 'Test1',
+   defaultStylistName: 'Test',
+   editedStylistName: 'EditedTest'
 };
 
 export const devices = {
@@ -26,7 +27,8 @@ export const appUrl = {
    baseUrl: 'https://d35c5nyi9oqz24.cloudfront.net',
    homepageUrl: 'https://d35c5nyi9oqz24.cloudfront.net/home-page',
    clientsUrl: 'https://d35c5nyi9oqz24.cloudfront.net/clients',
-   stylistUrl: 'https://d35c5nyi9oqz24.cloudfront.net/stylists'
+   stylistUrl: 'https://d35c5nyi9oqz24.cloudfront.net/stylists',
+   stylsitManagementUrl: 'https://d35c5nyi9oqz24.cloudfront.net/stylists-management'
 };
 
 export const messages = { 

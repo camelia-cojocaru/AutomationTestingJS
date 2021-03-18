@@ -2,6 +2,7 @@ import {stylistCRUDConst,messages,appUrl} from '../constants/constants';
 import Homepage from "../page_objects/pages/Homepage";
 import SalonSignIn from "../page_objects/pages/SalonSignIn";
 import {stylistAdd, stylistEdit} from "../page_objects/pages/StylistCRUD";
+import Navbar from '../page_objects/components/Navbar'
 
 describe('Stylist CRUD functionalities', () => {
 
@@ -34,13 +35,21 @@ describe('Stylist CRUD functionalities', () => {
         expect(browser).toHaveUrl(appUrl.homepageUrl);
     });
 
-     it('Should edit stylist ', () => {
+     it('Should edit existing stylist ', () => {
         Homepage.redirectToStylistManagement();
         stylistEdit.selectDefaultStylist();
-        
+        stylistAdd.fillName(stylistCRUDConst.editedStylistName);
+        stylistEdit.clickEditButton();
+
+       expect(stylistEdit.editedStylist).toBeVisible();
     });
 
-    it('Should remove stylist', () => {
-        
+    it('Should remove existings stylist', () => {
+        Navbar.clickBackButton();
+        stylistEdit.selectEditedStylist();
+        stylistEdit.clickRemoveButton();
+
+        expect(browser).toHaveUrl(appUrl.stylsitManagementUrl);
+
     });
 });

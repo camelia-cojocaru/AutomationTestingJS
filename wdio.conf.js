@@ -19,7 +19,7 @@ exports.config = {
     specs: ['./tests/*.js'],
     // Patterns to exclude.S
     exclude: [
-        './tests/Test-StylistCRUD.js'
+        './tests/Test-SignIn.js'
     ],
     //
     // ============

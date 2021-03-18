@@ -7,11 +7,11 @@ class Homepage extends Base{
     };
 
     get clientsButton(){
-        return $('=Clients');
+        return $('div=Clients');
     };
 
     get stylistButton(){
-        return $('=Stylists Management');
+        return $('#root > div > div:nth-child(5)');
     };
 
     redirectToClients(){

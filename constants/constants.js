@@ -28,12 +28,12 @@ export const appUrl = {
    homepageUrl: 'https://d35c5nyi9oqz24.cloudfront.net/home-page',
    clientsUrl: 'https://d35c5nyi9oqz24.cloudfront.net/clients',
    stylistUrl: 'https://d35c5nyi9oqz24.cloudfront.net/stylists',
-   stylsitManagementUrl: 'https://d35c5nyi9oqz24.cloudfront.net/stylists-management'
+   stylsitManagetUrl: 'https://d35c5nyi9oqz24.cloudfront.net/stylists-management'
 };
 
 export const messages = { 
    maxCharLenght: 'You reached the max character length',
    stylistAlreadyExists: 'Stylist already exists',
-   incorrectSalonId: 'Salon Id is incorrect!'
-
-}
+   incorrectSalonId: 'Salon Id is incorrect!',
+   cannotRemoveYourselfErr:'You cannot remove yourself.'
+};

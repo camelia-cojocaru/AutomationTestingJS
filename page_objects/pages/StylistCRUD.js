@@ -49,9 +49,13 @@ class StylistEdit extends Base{
         return $('.edit-stylists__message');
     };
 
+    get loggedInStylist(){
+        return $('.name=Test');
+    };
+
     get defaultStylist(){
         return $('.name=Test1');
-    }
+    };
 
     get editButton(){
         return $('button=Save');
@@ -66,8 +70,13 @@ class StylistEdit extends Base{
     };
 
     get confirmRemoveButton(){
-        return $('button=Remove stylsit')
+        return $('#root > div > div.sc-idOhPF.kGntgQ > div > div.sc-hKgILt.gTLZXx.modal.modal--open.enter-done > div > button.sc-jSgupP.gpRcVU.button--dark')
     }
+
+    get error(){
+        return $('p');
+    };
+
     clickEditButton(){
         this.editButton.click();
     };
@@ -90,6 +99,11 @@ class StylistEdit extends Base{
     selectEditedStylist(){
         this.editedStylist.waitForExist();
         this.editedStylist.click();
+    };
+
+    selectLoggedInStylist(){
+        this.loggedInStylist.waitForExist();
+        this.loggedInStylist.click();
     };
 };
 

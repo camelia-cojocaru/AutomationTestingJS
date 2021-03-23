@@ -8,7 +8,8 @@ export const stylistCRUDConst = {
    invalidStylistName: 'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS',
    validStylistName: 'Test1',
    defaultStylistName: 'Test',
-   editedStylistName: 'EditedTest'
+   editedStylistName: 'EditedTest',
+   firstStylistName: 'Stylist'
 };
 
 export const devices = {
@@ -28,7 +29,7 @@ export const appUrl = {
    homepageUrl: 'https://d35c5nyi9oqz24.cloudfront.net/home-page',
    clientsUrl: 'https://d35c5nyi9oqz24.cloudfront.net/clients',
    stylistUrl: 'https://d35c5nyi9oqz24.cloudfront.net/stylists',
-   stylsitManagetUrl: 'https://d35c5nyi9oqz24.cloudfront.net/stylists-management'
+   stylistManagementUrl: 'https://d35c5nyi9oqz24.cloudfront.net/stylists-management'
 };
 
 export const messages = { 

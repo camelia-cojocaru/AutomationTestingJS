@@ -20,22 +20,19 @@ describe('Stylist CRUD functionalities', () => {
             
         });
         it('Error appears when to many characters are entered', () => {
-        
             Navbar.clickBackButton();
-            //stylistEdit.clickSelectedStylist('Test');
-            stylistEdit.selectLoggedInStylist();
-           
+            stylistCommon.clickSelectedStylist(stylistCRUDConst.defaultStylistName);          
             Homepage.redirectToStylistManagement();
             Navbar.clickAddButton();
-            
             stylistCommon.fillName(stylistCRUDConst.invalidStylistName);
+
             const message=stylistAdd.error;
             expect(message).toHaveText(messages.maxCharLenght);
         }); 
 
 
         it('Error appears when user tries to enter stylist that already exists', () => {
-            stylistCommon.fillName('Stylist');
+            stylistCommon.fillName(stylistCRUDConst.firstStylistName);
             Footer.clickSaveButton();
 
             const message=stylistEdit.error;
@@ -43,31 +40,30 @@ describe('Stylist CRUD functionalities', () => {
         });
 
         it('Should create stylist with valid name', () => {
-           
             stylistCommon.fillName(stylistCRUDConst.validStylistName );
             Footer.clickSaveButton();
-            //Footer.clickContinueButton();
 
-            expect(browser).toHaveUrl(appUrl.homepageUrl);
+            expect(browser).toHaveUrl(appUrl.stylistManagementUrl);
         });
 
     });
 
     context('Test the Edit Stylist Functionality ', () => {
-        it('Error when user edits stylist with name that is already taken', () => {
-            Homepage.redirectToStylistManagement();
-            stylistEdit.selectDefaultStylist();
+        //// This is the it that should be enabled once the stylist 
+        
+        // it('Error when user edits stylist with name that is already taken', () => {
+        //     stylistEdit.selectLoggedInStylist();
             
-            stylistCommon.fillName(stylistCRUDConst.defaultStylistName);
-            Footer.clickSaveButton();
+        //     stylistCommon.fillName(stylistCRUDConst.validStylistName);
+        //     Footer.clickSaveButton();
 
-            const message= stylistEdit.error;
-            expect(message).toHaveText(messages.stylistAlreadyExists);
-        });
+        //     const message= stylistEdit.error;
+        //     expect(message).toHaveText(messages.stylistAlreadyExists);
+        // });
 
         it('Should edit existing stylist ', () => {
-
-            stylsitCommon.fillName(stylistCRUDConst.editedStylistName);
+            stylistCommon.clickSelectedStylist(stylistCRUDConst.defaultStylistName);
+            stylistCommon.fillName(stylistCRUDConst.editedStylistName);
             Footer.clickSaveButton();
 
             expect(stylistEdit.editedStylist).toBeVisible();
@@ -78,26 +74,22 @@ describe('Stylist CRUD functionalities', () => {
     context('Test the Remove Stylist Functionality', () => {
         
         it('Error when trying to remove the stylist you are logged in as', () => {
-
-
-           stylistEdit.clickSelectedStylist('Test');
-
+            stylistCommon.clickSelectedStylist(stylistCRUDConst.validStylistName);
             stylistCommon.fillName(stylistCRUDConst.defaultStylistName+'ss');
             Footer.clickRemoveButton();
             stylistEdit.clickConfirmRemoveButton();
             
-            const message=stylistAdd.error;
+            const message=stylistEdit.error;
             expect(message).toHaveText(messages.cannotRemoveYourselfErr);
         }); 
 
         it('Should remove existings stylist', () => {
-        
             Navbar.clickBackButton();
-            stylistEdit.selectEditedStylist();
+            stylistCommon.clickSelectedStylist(stylistCRUDConst.editedStylistName);
             Footer.clickRemoveButton();
             stylistEdit.clickConfirmRemoveButton();
 
-            expect(browser).toHaveUrl(appUrl.stylsitManagementUrl);
+            expect(browser).toHaveUrl(appUrl.stylistManagementUrl);
         });
 
     });

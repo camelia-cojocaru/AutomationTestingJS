@@ -1,37 +1,52 @@
-import {stylistCRUDConst,messages,appUrl} from '../constants/constants';
+
+import {stylistCRUDConst,messages,appUrl,pageTitle} from '../constants/constants';
 import Homepage from "../page_objects/pages/Homepage";
 import SalonSignIn from "../page_objects/pages/SalonSignIn";
-import {stylistAdd, stylistEdit} from "../page_objects/pages/StylistCRUD";
-import Navbar from '../page_objects/components/Navbar'
+import {stylistAdd, stylistEdit,stylistCommon} from "../page_objects/pages/StylistCRUD";
+import Navbar from '../page_objects/components/Navbar';
+import Footer from '../page_objects/components/Footer';
+
 
 describe('Stylist CRUD functionalities', () => {
 
     context('Test the Add Stylist Functionality', () => {
 
-        it('Error appears when to many characters are entered', () => {
+        it('Check Add new stylist hyperlink functionality', () => {
             SalonSignIn.openApp();
             SalonSignIn.salonSignIn();
-            stylistAdd.clickAddStylistButton();
-            stylistAdd.inputIsVisible();
-            stylistAdd.fillName(stylistCRUDConst.invalidStylistName);
+            stylistCommon.clickAddNewStylistLink();
 
+            expect(stylistCommon.title).toHaveText(pageTitle.addStylist);
+            
+        });
+        it('Error appears when to many characters are entered', () => {
+        
+            Navbar.clickBackButton();
+            //stylistEdit.clickSelectedStylist('Test');
+            stylistEdit.selectLoggedInStylist();
+           
+            Homepage.redirectToStylistManagement();
+            Navbar.clickAddButton();
+            
+            stylistCommon.fillName(stylistCRUDConst.invalidStylistName);
             const message=stylistAdd.error;
             expect(message).toHaveText(messages.maxCharLenght);
         }); 
+
+
         it('Error appears when user tries to enter stylist that already exists', () => {
-            stylistAdd.inputIsVisible();
-            stylistAdd.fillName(stylistCRUDConst.defaultStylistName );
-            stylistAdd.clickSaveButton();
+            stylistCommon.fillName('Stylist');
+            Footer.clickSaveButton();
 
             const message=stylistEdit.error;
             expect(message).toHaveText(messages.stylistAlreadyExists);
         });
 
         it('Should create stylist with valid name', () => {
-            stylistAdd.inputIsVisible();
-            stylistAdd.fillName(stylistCRUDConst.validStylistName );
-            stylistAdd.clickSaveButton();
-            stylistAdd.clickConfirmSaveButton();
+           
+            stylistCommon.fillName(stylistCRUDConst.validStylistName );
+            Footer.clickSaveButton();
+            //Footer.clickContinueButton();
 
             expect(browser).toHaveUrl(appUrl.homepageUrl);
         });
@@ -42,9 +57,9 @@ describe('Stylist CRUD functionalities', () => {
         it('Error when user edits stylist with name that is already taken', () => {
             Homepage.redirectToStylistManagement();
             stylistEdit.selectDefaultStylist();
-            stylistAdd.inputIsVisible();
-            stylistAdd.fillNam(stylistCRUDConst.defaultStylistName);
-            stylistEdit.clickEditButton();
+            
+            stylistCommon.fillName(stylistCRUDConst.defaultStylistName);
+            Footer.clickSaveButton();
 
             const message= stylistEdit.error;
             expect(message).toHaveText(messages.stylistAlreadyExists);
@@ -52,9 +67,8 @@ describe('Stylist CRUD functionalities', () => {
 
         it('Should edit existing stylist ', () => {
 
-            stylistAdd.inputIsVisible();
-            stylistAdd.fillName(stylistCRUDConst.editedStylistName);
-            stylistEdit.clickEditButton();
+            stylsitCommon.fillName(stylistCRUDConst.editedStylistName);
+            Footer.clickSaveButton();
 
             expect(stylistEdit.editedStylist).toBeVisible();
         });
@@ -65,9 +79,11 @@ describe('Stylist CRUD functionalities', () => {
         
         it('Error when trying to remove the stylist you are logged in as', () => {
 
-            stylistEdit.selectLoggedInStylist();
-            stylistAdd.fillName(stylistCRUDConst.defaultStylistName+'ss');
-            stylistEdit.clickRemoveButton();
+
+           stylistEdit.clickSelectedStylist('Test');
+
+            stylistCommon.fillName(stylistCRUDConst.defaultStylistName+'ss');
+            Footer.clickRemoveButton();
             stylistEdit.clickConfirmRemoveButton();
             
             const message=stylistAdd.error;
@@ -78,7 +94,7 @@ describe('Stylist CRUD functionalities', () => {
         
             Navbar.clickBackButton();
             stylistEdit.selectEditedStylist();
-            stylistEdit.clickRemoveButton();
+            Footer.clickRemoveButton();
             stylistEdit.clickConfirmRemoveButton();
 
             expect(browser).toHaveUrl(appUrl.stylsitManagementUrl);

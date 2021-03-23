@@ -37,3 +37,7 @@ export const messages = {
    incorrectSalonId: 'Salon Id is incorrect!',
    cannotRemoveYourselfErr:'You cannot remove yourself.'
 };
+
+export const pageTitle = {
+   addStylist: 'Add new Stylist'
+}

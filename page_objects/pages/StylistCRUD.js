@@ -1,5 +1,30 @@
 import Base from './Base';
 import SalonSignIn from './SalonSignIn';
+
+
+class Stylist extends Base{
+
+    get addNewStylistLink(){
+        return $('.new-stylist--add');
+    };
+    get nameInput(){
+        return $('#input');
+    };
+
+    get title(){
+        return $('.navbar__stylists__title');
+    };
+
+    fillName(name){
+        this.nameInput.waitForExist();
+        this.nameInput.setValue(name);
+    };
+
+    clickAddNewStylistLink(){
+        this.addNewStylistLink.waitForExist();
+        this.addNewStylistLink.click();
+    };
+}
 class StylistAdd extends Base{
 
     get nameInput(){
@@ -9,10 +34,7 @@ class StylistAdd extends Base{
     get error(){
         return $('.message');
     };
-
-    get saveStylistButton(){
-        return $('button=Save');
-    };
+;
 
     get addStylistButton(){
         return $('.new-stylist--add');
@@ -26,16 +48,9 @@ class StylistAdd extends Base{
         this.addStylistButton.click();
     };
 
-    inputIsVisible(){
-        this.nameInput.waitForExist();
-    };
-
     fillName(name){
+        this.nameInput.waitForExist();
         this.nameInput.setValue(name);
-    };
-
-    clickSaveButton(){
-        this.saveStylistButton.click();
     };
 
     clickConfirmSaveButton(){
@@ -58,14 +73,6 @@ class StylistEdit extends Base{
         return $('.name=Test1');
     };
 
-    get editButton(){
-        return $('button=Save');
-    };
-
-    get removeButton(){
-        return $('button*=Remove');
-    };
-
     get editedStylist(){
         return $('.name=EditedTest');
     };
@@ -74,18 +81,6 @@ class StylistEdit extends Base{
         return $('#root > div > div.sc-idOhPF.kGntgQ > div > div.sc-hKgILt.gTLZXx.modal.modal--open.enter-done > div > button.sc-jSgupP.gpRcVU.button--dark')
     }
 
-    get error(){
-        return $('p');
-    };
-
-    clickEditButton(){
-        this.editButton.click();
-    };
-
-    clickRemoveButton(){
-        this.removeButton.waitForExist();
-        this.removeButton.click();
-    };
 
     clickConfirmRemoveButton(){
         this.confirmRemoveButton.waitForExist();
@@ -113,8 +108,16 @@ class StylistEdit extends Base{
 
     };
 
+    clickSelectedStylist(data){
+
+        var stylist = $('.name=' + data); 
+        stylist.waitForExist();
+        stylist.click();
+    }
+
 };
 
+export const stylistCommon = new Stylist();
 export const stylistAdd = new StylistAdd();
 export const stylistEdit = new StylistEdit();
 

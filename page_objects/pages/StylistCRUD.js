@@ -1,4 +1,5 @@
 import Base from './Base';
+import SalonSignIn from './SalonSignIn';
 class StylistAdd extends Base{
 
     get nameInput(){
@@ -105,6 +106,13 @@ class StylistEdit extends Base{
         this.loggedInStylist.waitForExist();
         this.loggedInStylist.click();
     };
+
+    enterHomepageWithDefaultStylsit(){
+        SalonSignIn();
+        this.selectDefaultStylist();
+
+    };
+
 };
 
 export const stylistAdd = new StylistAdd();

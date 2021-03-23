@@ -11,7 +11,7 @@ class Homepage extends Base{
     };
 
     get stylistButton(){
-        return $('#root > div > div:nth-child(5)');
+        return $('div=Stylist management');
     };
 
     redirectToClients(){

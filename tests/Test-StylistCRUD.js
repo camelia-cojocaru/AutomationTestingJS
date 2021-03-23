@@ -69,6 +69,7 @@ describe('Stylist CRUD functionalities', () => {
             stylistAdd.fillName(stylistCRUDConst.defaultStylistName+'ss');
             stylistEdit.clickRemoveButton();
             stylistEdit.clickConfirmRemoveButton();
+            
             const message=stylistAdd.error;
             expect(message).toHaveText(messages.cannotRemoveYourselfErr);
         }); 

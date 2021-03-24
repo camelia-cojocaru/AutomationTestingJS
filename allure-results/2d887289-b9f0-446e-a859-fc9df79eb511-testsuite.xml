@@ -1,0 +1,109 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1616579368021' stop='1616579396925'>
+    <name>Stylist CRUD functionalities: Test the Add Stylist Functionality</name>
+    <title>Stylist CRUD functionalities: Test the Add Stylist Functionality</title>
+    <test-cases>
+        <test-case start='1616579368021' status='passed' stop='1616579376773'>
+            <name>Check Add new stylist hyperlink functionality</name>
+            <title>Check Add new stylist hyperlink functionality</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='feature' value='Feature'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.90'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1616579376773' status='broken' stop='1616579376863'>
+            <name>Error appears when to many characters are entered</name>
+            <title>Error appears when to many characters are entered</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.90'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>_StylistCRUD.stylistCommon.clickSelectedStylist is not a function</message>
+                <stack-trace>TypeError: _StylistCRUD.stylistCommon.clickSelectedStylist is not a function
+                    at Context.&lt;anonymous> (C:\Users\Camelia\ColorDj\tests\/Test-StylistCRUD.js:25:27)
+                    at Context.executeSync (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\index.js:38:22)
+                    at C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\index.js:69:68</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1616579376863' status='broken' stop='1616579386902'>
+            <name>Error appears when user tries to enter stylist that already exists</name>
+            <title>Error appears when user tries to enter stylist that already exists</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.90'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>element ("#input") still not existing after 10000ms</message>
+                <stack-trace>Error: element ("#input") still not existing after 10000ms
+                    at C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\commands\browser\waitUntil.js:66:23
+                    at Element.elementErrorHandlerCallbackFn (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\middlewares.js:23:32)
+                    at Element.runCommandWithHooks (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\wrapCommand.js:105:25)
+                    at Element.runCommandWithHooks (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\wrapCommand.js:100:24)
+                    at Element.wrapCommandFn (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\wrapCommand.js:67:44)
+                    at Element.elementErrorHandlerCallback (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\middlewares.js:44:12)
+                    at Element.waitForExist (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\commands\element\waitForExist.js:40:17)
+                    at Element.wrapCommandFn (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\wrapCommand.js:60:23)
+                    at Element.elementErrorHandlerCallbackFn (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\middlewares.js:23:65)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                    at Element.waitForExist (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\middlewares.js:44:12)
+                    at Stylist.fillName (C:\Users\Camelia\ColorDj\page_objects\pages\/StylistCRUD.js:19:24)
+                    at Context.&lt;anonymous> (C:\Users\Camelia\ColorDj\tests\/Test-StylistCRUD.js:37:27)
+                    at Context.executeSync (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\index.js:38:22)
+                    at C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\index.js:69:68</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1616579386903' status='broken' stop='1616579396925'>
+            <name>Should create stylist with valid name</name>
+            <title>Should create stylist with valid name</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.90'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>element ("#input") still not existing after 10000ms</message>
+                <stack-trace>Error: element ("#input") still not existing after 10000ms
+                    at C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\commands\browser\waitUntil.js:66:23
+                    at Element.elementErrorHandlerCallbackFn (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\middlewares.js:23:32)
+                    at Element.runCommandWithHooks (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\wrapCommand.js:105:25)
+                    at Element.runCommandWithHooks (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\wrapCommand.js:100:24)
+                    at Element.wrapCommandFn (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\wrapCommand.js:67:44)
+                    at Element.elementErrorHandlerCallback (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\middlewares.js:44:12)
+                    at Element.waitForExist (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\commands\element\waitForExist.js:40:17)
+                    at Element.wrapCommandFn (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\wrapCommand.js:60:23)
+                    at Element.elementErrorHandlerCallbackFn (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\middlewares.js:23:65)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                    at Element.waitForExist (C:\Users\Camelia\ColorDj\node_modules\webdriverio\build\middlewares.js:44:12)
+                    at Stylist.fillName (C:\Users\Camelia\ColorDj\page_objects\pages\/StylistCRUD.js:19:24)
+                    at Context.&lt;anonymous> (C:\Users\Camelia\ColorDj\tests\/Test-StylistCRUD.js:46:27)
+                    at Context.executeSync (C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\index.js:38:22)
+                    at C:\Users\Camelia\ColorDj\node_modules\@wdio\sync\build\index.js:69:68</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

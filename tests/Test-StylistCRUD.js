@@ -1,4 +1,4 @@
-
+import allureReporter from '@wdio/allure-reporter'
 import {stylistCRUDConst,messages,appUrl,pageTitle} from '../constants/constants';
 import Homepage from "../page_objects/pages/Homepage";
 import SalonSignIn from "../page_objects/pages/SalonSignIn";
@@ -17,6 +17,8 @@ describe('Stylist CRUD functionalities', () => {
             stylistCommon.clickAddNewStylistLink();
 
             expect(stylistCommon.title).toHaveText(pageTitle.addStylist);
+            allureReporter.addFeature('Add Hyperlink');
+            allureReporter.addSeverity('Critical');
             
         });
         it('Error appears when to many characters are entered', () => {
@@ -28,6 +30,7 @@ describe('Stylist CRUD functionalities', () => {
 
             const message=stylistAdd.error;
             expect(message).toHaveText(messages.maxCharLenght);
+
         }); 
 
 

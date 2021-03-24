@@ -1,0 +1,112 @@
+{
+  "uid" : "62b51790a06e1c39",
+  "name" : "Error when trying to remove the stylist you are logged in as",
+  "fullName" : "Stylist CRUD functionalities: Test the Remove Stylist Functionality.Error when trying to remove the stylist you are logged in as",
+  "historyId" : "5fbd8dbe7e4c9dfda0ce0109c42b926e",
+  "time" : {
+    "start" : 1616587000177,
+    "stop" : 1616587000578,
+    "duration" : 401
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "_StylistCRUD.stylistCommon.clickSelectedStylist is not a function",
+  "statusTrace" : "TypeError: _StylistCRUD.stylistCommon.clickSelectedStylist is not a function\n                    at Context.<anonymous> (C:\\Users\\Camelia\\ColorDj\\tests\\/Test-StylistCRUD.js:80:27)\n                    at Context.executeSync (C:\\Users\\Camelia\\ColorDj\\node_modules\\@wdio\\sync\\build\\index.js:38:22)\n                    at C:\\Users\\Camelia\\ColorDj\\node_modules\\@wdio\\sync\\build\\index.js:69:68",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "_StylistCRUD.stylistCommon.clickSelectedStylist is not a function",
+    "statusTrace" : "TypeError: _StylistCRUD.stylistCommon.clickSelectedStylist is not a function\n                    at Context.<anonymous> (C:\\Users\\Camelia\\ColorDj\\tests\\/Test-StylistCRUD.js:80:27)\n                    at Context.executeSync (C:\\Users\\Camelia\\ColorDj\\node_modules\\@wdio\\sync\\build\\index.js:38:22)\n                    at C:\\Users\\Camelia\\ColorDj\\node_modules\\@wdio\\sync\\build\\index.js:69:68",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/window/maximize",
+      "time" : {
+        "start" : 1616587000177,
+        "stop" : 1616587000183,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f8bc1445891e1fbb",
+        "name" : "Response",
+        "source" : "f8bc1445891e1fbb.json",
+        "type" : "application/json",
+        "size" : 59
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "GET /session/:sessionId/screenshot",
+      "time" : {
+        "start" : 1616587000184,
+        "stop" : 1616587000578,
+        "duration" : 394
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "1a1b691395574999",
+        "name" : "Screenshot",
+        "source" : "1a1b691395574999.png",
+        "type" : "image/png",
+        "size" : 250103
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Stylist CRUD functionalities: Test the Remove Stylist Functionality"
+  }, {
+    "name" : "testClass",
+    "value" : "Stylist CRUD functionalities: Test the Remove Stylist Functionality"
+  }, {
+    "name" : "testMethod",
+    "value" : "Error when trying to remove the stylist you are logged in as"
+  }, {
+    "name" : "package",
+    "value" : "Stylist CRUD functionalities: Test the Remove Stylist Functionality"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-89.0.4389.90"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "62b51790a06e1c39.json",
+  "parameterValues" : [ "chrome-89.0.4389.90" ]
+}

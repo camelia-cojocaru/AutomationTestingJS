@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": ".//*[contains(@class, \"name\") and normalize-space() = \"EditedTest\"]"
+}

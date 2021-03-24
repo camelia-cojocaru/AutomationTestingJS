@@ -1,0 +1,108 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Stylist CRUD functionalities: Test the Add Stylist Functionality",
+    "children" : [ {
+      "name" : "Check Add new stylist hyperlink functionality",
+      "uid" : "124a41f089a418c0",
+      "parentUid" : "1e266f2f70b1b43819b0de972dbebf37",
+      "status" : "passed",
+      "time" : {
+        "start" : 1616590739175,
+        "stop" : 1616590744908,
+        "duration" : 5733
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-89.0.4389.90" ]
+    }, {
+      "name" : "Error appears when to many characters are entered",
+      "uid" : "1e7ef0fe23f4e6bb",
+      "parentUid" : "1e266f2f70b1b43819b0de972dbebf37",
+      "status" : "passed",
+      "time" : {
+        "start" : 1616590744909,
+        "stop" : 1616590749323,
+        "duration" : 4414
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-89.0.4389.90" ]
+    }, {
+      "name" : "Error appears when user tries to enter stylist that already exists",
+      "uid" : "f01e4dc2f56a7de7",
+      "parentUid" : "1e266f2f70b1b43819b0de972dbebf37",
+      "status" : "passed",
+      "time" : {
+        "start" : 1616590749323,
+        "stop" : 1616590750508,
+        "duration" : 1185
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-89.0.4389.90" ]
+    }, {
+      "name" : "Should create stylist with valid name",
+      "uid" : "af158421faae2fc7",
+      "parentUid" : "1e266f2f70b1b43819b0de972dbebf37",
+      "status" : "passed",
+      "time" : {
+        "start" : 1616590750508,
+        "stop" : 1616590751683,
+        "duration" : 1175
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-89.0.4389.90" ]
+    } ],
+    "uid" : "1e266f2f70b1b43819b0de972dbebf37"
+  }, {
+    "name" : "Stylist CRUD functionalities: Test the Edit Stylist Functionality ",
+    "children" : [ {
+      "name" : "Should edit existing stylist ",
+      "uid" : "c8f73f53c466089c",
+      "parentUid" : "a05a4f212c6a5930e49f2303e14e1861",
+      "status" : "passed",
+      "time" : {
+        "start" : 1616590751712,
+        "stop" : 1616590753129,
+        "duration" : 1417
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-89.0.4389.90" ]
+    } ],
+    "uid" : "a05a4f212c6a5930e49f2303e14e1861"
+  }, {
+    "name" : "Stylist CRUD functionalities: Test the Remove Stylist Functionality",
+    "children" : [ {
+      "name" : "Error when trying to remove the stylist you are logged in as",
+      "uid" : "e49c1d22fbf4ea1f",
+      "parentUid" : "d4ee5d8b28635f1a713dc7ea093a48f2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1616590753137,
+        "stop" : 1616590755008,
+        "duration" : 1871
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-89.0.4389.90" ]
+    }, {
+      "name" : "Should remove existings stylist",
+      "uid" : "1fc6283cf354c0cb",
+      "parentUid" : "d4ee5d8b28635f1a713dc7ea093a48f2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1616590755009,
+        "stop" : 1616590757865,
+        "duration" : 2856
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-89.0.4389.90" ]
+    } ],
+    "uid" : "d4ee5d8b28635f1a713dc7ea093a48f2"
+  } ]
+}

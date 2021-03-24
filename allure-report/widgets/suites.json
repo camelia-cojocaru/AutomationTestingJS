@@ -1,0 +1,37 @@
+{
+  "total" : 3,
+  "items" : [ {
+    "uid" : "1623960d55664eae9001c9786817b881",
+    "name" : "Stylist CRUD functionalities: Test the Add Stylist Functionality",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 4
+    }
+  }, {
+    "uid" : "f836efc2361c0b45d7d3ff740c6997f4",
+    "name" : "Stylist CRUD functionalities: Test the Remove Stylist Functionality",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "bb83b7d4e535a1432f0cbec96532f0f5",
+    "name" : "Stylist CRUD functionalities: Test the Edit Stylist Functionality ",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}

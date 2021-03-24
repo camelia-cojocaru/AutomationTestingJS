@@ -1,0 +1,58 @@
+{
+  "uid" : "a37426663a268e49",
+  "name" : "Error appears when to many characters are entered",
+  "fullName" : "Stylist CRUD functionalities: Test the Add Stylist Functionality.Error appears when to many characters are entered",
+  "historyId" : "3394393b0fcd98d3005724b3c0aac0a0",
+  "time" : {
+    "start" : 1616580019623,
+    "stop" : 1616580019708,
+    "duration" : 85
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "_StylistCRUD.stylistCommon.clickSelectedStylist is not a function",
+  "statusTrace" : "TypeError: _StylistCRUD.stylistCommon.clickSelectedStylist is not a function\n                    at Context.<anonymous> (C:\\Users\\Camelia\\ColorDj\\tests\\/Test-StylistCRUD.js:25:27)\n                    at Context.executeSync (C:\\Users\\Camelia\\ColorDj\\node_modules\\@wdio\\sync\\build\\index.js:38:22)\n                    at C:\\Users\\Camelia\\ColorDj\\node_modules\\@wdio\\sync\\build\\index.js:69:68",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Stylist CRUD functionalities: Test the Add Stylist Functionality"
+  }, {
+    "name" : "testClass",
+    "value" : "Stylist CRUD functionalities: Test the Add Stylist Functionality"
+  }, {
+    "name" : "testMethod",
+    "value" : "Error appears when to many characters are entered"
+  }, {
+    "name" : "package",
+    "value" : "Stylist CRUD functionalities: Test the Add Stylist Functionality"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-89.0.4389.90"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a37426663a268e49.json",
+  "parameterValues" : [ "chrome-89.0.4389.90" ]
+}

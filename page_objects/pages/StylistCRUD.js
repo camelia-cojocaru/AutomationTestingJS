@@ -24,6 +24,13 @@ class Stylist extends Base{
         this.addNewStylistLink.waitForExist();
         this.addNewStylistLink.click();
     };
+    
+    clickSelectedStylist(data){
+
+        var stylist = $('.name=' + data); 
+        stylist.waitForExist();
+        stylist.click();
+    }
 }
 class StylistAdd extends Base{
 
@@ -108,12 +115,7 @@ class StylistEdit extends Base{
 
     };
 
-    clickSelectedStylist(data){
 
-        var stylist = $('.name=' + data); 
-        stylist.waitForExist();
-        stylist.click();
-    }
 
 };
 
